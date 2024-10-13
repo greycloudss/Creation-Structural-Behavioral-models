@@ -1,0 +1,2 @@
+Crashed due to: 
+/E:/VU/java/nd3/demo/target/classes/com/example/demo/hello-view.fxml:13

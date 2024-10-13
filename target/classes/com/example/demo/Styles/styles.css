@@ -1,0 +1,18 @@
+
+.tilePane {
+    -fx-background-color: #322e52;
+}
+
+
+#exitButton {
+    -fx-text-fill: #ffffff;
+    -fx-border-radius: 0;
+    -fx-background-color: #3f3d54;
+
+}
+
+#exitButton:hover {
+    -fx-text-fill: #c2eec5;
+    -fx-border-radius: 2;
+    -fx-background-color: #5c6296;
+}
