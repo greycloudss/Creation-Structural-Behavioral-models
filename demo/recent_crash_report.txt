@@ -1,3 +1,0 @@
-Crashed due to: 
-/E:/VU/java/nd3/demo/target/classes/com/example/demo/SecondWindow.fxml:16
- java.lang.IllegalArgumentException: Can not set javafx.scene.control.Label field com.example.demo.secController.lab to javafx.scene.text.Text
