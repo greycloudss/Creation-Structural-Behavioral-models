@@ -1,7 +1,6 @@
 package com.example.demo;
 
-import javax.swing.*;
 
-public interface Colour {
-    JColorChooser getColorChooser();
+interface Colour {
+    void applyColour();
 }

@@ -4,29 +4,23 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-import javafx.stage.StageStyle;
-import javafx.stage.WindowEvent;
-
-import java.io.BufferedWriter;
-import java.io.FileWriter;
 import java.io.IOException;
 
 public class HelloApplication extends Application {
-    public Stage secStage;
-    public Stage mainStage;
-
     @Override
-    public void start(Stage secStage) throws IOException {
-        this.secStage = secStage;
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("SecondWindow.fxml"));
-        Scene scene = new Scene(fxmlLoader.load());
-
-        secStage.initStyle(StageStyle.UNDECORATED);
-        secStage.setScene(scene);
-        secStage.show();
-        openNewWin();
+    public void start(Stage primaryStage) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/com/example/demo/PrimaryWindow.fxml"));
+        Scene scene = new Scene(fxmlLoader.load(), 600, 400);
+        primaryStage.setTitle("Primary Window");
+        primaryStage.setScene(scene);
+        primaryStage.show();
     }
 
+    public static void main(String[] args) {
+        launch(args);
+    }
+}
+/*
     public void openNewWin() throws IOException {
         try {
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("PrimaryWindow.fxml"));
@@ -48,7 +42,6 @@ public class HelloApplication extends Application {
                     secStage.close();
             });
 
-
         } catch (Exception e) {
             final String errorFileName = "recent_crash_report.txt";
             try (BufferedWriter bw = new BufferedWriter(new FileWriter(errorFileName))) {
@@ -66,8 +59,4 @@ public class HelloApplication extends Application {
             this.secStage.setY(secondWindowY);
         }
     }
-
-    public static void main() {
-        launch();
-    }
-}
+*/
